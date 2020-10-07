@@ -120,6 +120,13 @@ val flatten : 'a list list -> 'a list
    (length of the argument + length of the longest sub-list).
  *)
 
+val intersperse : sep:'a -> 'a list -> 'a list
+(** [intersperse ~sep l] is the list formed by inserting [sep] between
+    adjacent elements of [l].
+
+    For example, [intersperse 0 \[1; 2; 3\]] is [\[1; 0; 2; 0; 3\]].
+    @since 4.13.0
+ *)
 
 (** {1 Comparison} *)
 

@@ -87,6 +87,10 @@ let rec flatten = function
 
 let concat = flatten
 
+let rec intersperse sep = function
+  | ([] | [ _ ]) as l -> l
+  | x :: (_ :: _ as xs) -> x :: sep :: intersperse sep xs
+
 let rec map f = function
     [] -> []
   | a::l -> let r = f a in r :: map f l
