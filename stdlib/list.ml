@@ -299,6 +299,13 @@ let rec split = function
   | (x,y)::l ->
       let (rx, ry) = split l in (x::rx, y::ry)
 
+let rec split_with f = function
+    [] -> ([], [])
+  | hd::tl ->
+      let x, y = f hd in
+      let (rx, ry) = split_with f tl in
+      (x::rx, y::ry)
+
 let rec combine l1 l2 =
   match (l1, l2) with
     ([], []) -> []
