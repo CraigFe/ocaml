@@ -98,6 +98,13 @@ let () =
   assert (List.intersperse 0 [1; 2; 3] = [1; 0; 2; 0; 3]);
   assert (List.intersperse 0 [1; 2; 3; 4] = [1; 0; 2; 0; 3; 0; 4]);
 
+  assert (List.intercalate [10] [] = []);
+  assert (List.intercalate [10] [[1; 2]] = [1; 2]);
+  assert (List.intercalate [10] [[1; 2]; [3; 4]; [5; 6]]
+          = [1; 2; 10; 3; 4; 10; 5; 6]);
+  assert (List.intercalate [10; 20] [[1; 2]; [3; 4]; [5; 6]]
+          = [1; 2; 10; 20; 3; 4; 10; 20; 5; 6]);
+
   ()
 ;;
 

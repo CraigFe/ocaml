@@ -128,6 +128,14 @@ val intersperse : 'a -> 'a list -> 'a list
     @since 4.13.0
  *)
 
+val intercalate : 'a list -> 'a list list -> 'a list
+(** [intercalate sep l] is the list formed by inserting the list [sep]
+    between adjacent lists in [l] and then concatenating the result.
+    It is equivalent to [intersperse sep l |> concat].
+
+    @since 4.13.0
+  *)
+
 (** {1 Comparison} *)
 
 val equal : ('a -> 'a -> bool) -> 'a list -> 'a list -> bool

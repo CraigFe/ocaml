@@ -33,7 +33,7 @@ Working version
 - #9582: Add Array.{find_opt,find_map,split,combine}.
   (Nicolás Ojeda Bär, review by Daniel Bünzli and Gabriel Scherer)
 
-- #TODO: Add List.intersperse.
+- #TODO: Add List.intersperse and List.intercalate.
   (Craig Ferguson, review by TODO)
 
 ### Other libraries:
